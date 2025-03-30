@@ -22,7 +22,8 @@
             gobject-introspection
             cargo
             cargo-tauri # Optional, Only needed if Tauri doesn't work through the traditional way.
-            bun # Optional, this is for if you have a js frontend
+            pnpm # Optional, this is for if you have a js frontend
+            nodejs
           ];
 
           buildInputs = with pkgs; [
@@ -40,7 +41,9 @@
             openssl
           ];
 
-          shellHook = "fish";
+          shellHook = ''
+            fish
+          '';
         };
 
         packages = rec {
